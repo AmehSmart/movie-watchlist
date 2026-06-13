@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+
+.container {
+    width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+.header {
+    height: 220px;
+    background-image: url("images/image.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 30px 20px;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.header-content,
+.search-bar {
+    position: relative;
+    z-index: 1;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.header-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* SEARCH */
+
+.search-bar {
+    display: flex;
+    width: 100%;
+    transform: translateY(25px);
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px 0 0 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-bar button {
+    width: 120px;
+    border: none;
+    background: #f3f4f6;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0 6px 6px 0;
+}
+
+/* MAIN */
+
+.main {
+    padding: 40px 30px 20px;
+    background: white;
+}
+
+.movie-list {
+    width: 100%;
+}
+
+/* MOVIE CARD */
+
+.movie-card {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.movie-poster {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+/* INFO SECTION */
+
+.movie-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* TITLE ROW */
+
+.movie-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.movie-title-row h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.movie-rating {
+    font-size: 0.9rem;
+}
+
+/* META ROW */
+
+.movie-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+.remove-btn,
+.watchlist-btn {
+    cursor: pointer;
+     border: none;
+    background-color: inherit;
+    
+}
+
+/* DESCRIPTION */
+
+.movie-info p {
+    color: #6b7280;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+@media(min-width: 768px){
+.container{
+    width: 700px;
+}
+.header-content h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+}
+.header-content a {
+    font-size: 1.9rem;
+}
+.search-btn{
+    font-size: 1.45rem;
+    
+}
+
+
+
+}
+
+@media (min-width: 1024px){
+.container{
+    width: 100%;
+}
+.header-content h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+}
+.header-content a {
+    font-size: 1.9rem;
+}
+.search-btn{
+    font-size: 1.45rem;
+    
+}
+
+}
